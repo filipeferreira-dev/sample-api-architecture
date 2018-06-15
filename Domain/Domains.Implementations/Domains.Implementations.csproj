@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mappers\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Implementations\" />
-    <Folder Include="ViewModels\" />
+    <Folder Include="EntityServices\" />
+    <Folder Include="TaskServices\" />
   </ItemGroup>
 
 </Project>
