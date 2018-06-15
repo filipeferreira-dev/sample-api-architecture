@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - services", "1 - services", "{A01C2D75-C32A-4483-A5A8-4A950B563C64}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{A01C2D75-C32A-4483-A5A8-4A950B563C64}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "Services\WebApi\WebApi.csproj", "{C83C057C-20CC-4D8C-BD78-C5C04485D275}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - application", "2 - application", "{CF8F4A8A-1F8B-43B3-A795-3EE0BFE72B58}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{CF8F4A8A-1F8B-43B3-A795-3EE0BFE72B58}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - domain", "3 - domain", "{759F04E2-CDCB-41FF-83D9-876278A022BF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{759F04E2-CDCB-41FF-83D9-876278A022BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - infrastructure", "4 - infrastructure", "{1E395BA9-62C2-4D08-B4C5-55FABAFFAB11}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{1E395BA9-62C2-4D08-B4C5-55FABAFFAB11}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure\Infrastructure.csproj", "{9644A355-84ED-437D-B851-42648EA06D00}"
 EndProject
