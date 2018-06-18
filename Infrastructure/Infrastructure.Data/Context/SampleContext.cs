@@ -12,11 +12,21 @@ namespace Infrastructure.Data.Context
 
         #endregion
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        #region Constructors
+
+        public SampleContext(DbContextOptions<SampleContext> dbContextOptions) : base(dbContextOptions)
         {
-            //TODO: Retrive conectionString from appSettings.json
-            optionsBuilder.UseSqlServer(@"Server=tcp:sample-arch.database.windows.net,1433;Initial Catalog=SampleArchDataBase;Persist Security Info=False;User ID=user;Password=atlas@111;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+
         }
+
+        #endregion
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //TODO: Retrive conectionString from appSettings.json
+        //    optionsBuilder.UseSqlServer(@"Server=tcp:sample-arch.database.windows.net,1433;Initial Catalog=SampleArchDataBase;Persist Security Info=False;User ID=user;Password=atlas@111;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
