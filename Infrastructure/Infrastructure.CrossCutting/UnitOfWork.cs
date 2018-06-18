@@ -3,23 +3,23 @@ using Infrastructure.Data.Context;
 
 namespace Infrastructure.CrossCutting
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork<SampleContext>
     {
-        private readonly SampleContext _context;
+        public SampleContext Db { get; private set; }
 
         public UnitOfWork(SampleContext context)
         {
-            _context = context;
+            Db = context;
         }
 
         public bool Commit()
         {
-            return _context.SaveChanges() > 0;
+            return Db.SaveChanges() > 0;
         }
 
         public void Dispose()
         {
-            _context.Dispose();
+            Db.Dispose();
         }
     }
 }

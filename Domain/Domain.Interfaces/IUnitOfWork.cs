@@ -2,7 +2,7 @@
 
 namespace Domain.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable 
     {
         bool Commit();
     }
