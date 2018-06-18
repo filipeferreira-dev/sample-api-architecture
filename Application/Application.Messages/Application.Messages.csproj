@@ -11,4 +11,8 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
+  </ItemGroup>
+
 </Project>

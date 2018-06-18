@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="TaskServices\" />
+    <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
   </ItemGroup>
 
 </Project>
