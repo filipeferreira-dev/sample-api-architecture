@@ -15,7 +15,7 @@ namespace Infrastructure.Data.Repositories
 
         public override IQueryable<Product> Get()
         {
-            return UnitOfWork.Db<Product>();
+            return UnitOfWork;
         }
     }
 }
