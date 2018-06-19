@@ -6,5 +6,7 @@ namespace Domain.Services.Implementation.EntityServices
     public interface IProductEntityService
     {
         IList<ProductDto> GetAllProducts();
+
+        ProductDto GetById(long id);
     }
 }

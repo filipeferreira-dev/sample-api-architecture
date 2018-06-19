@@ -4,6 +4,8 @@ namespace Application.Services.Interfaces
 {
     public interface IProductApplicationService
     {
-        ProductsResponseMessage Get();
+        ProductListResponseMessage Get();
+
+        ProductResponseMessage GetById(long id);
     }
 }

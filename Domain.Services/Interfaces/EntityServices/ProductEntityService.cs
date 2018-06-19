@@ -22,5 +22,11 @@ namespace Domain.Services.Interfaces.EntityServices
             var products = productRepository.Get();
             return mapper.Map<IList<ProductDto>>(products);
         }
+
+        public ProductDto GetById(long id)
+        {
+            var product = productRepository.GetById(id);
+            return mapper.Map<ProductDto>(product);
+        }
     }
 }

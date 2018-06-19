@@ -16,5 +16,10 @@ namespace Infrastructure.Data.Repositories
         {
             return Db.Products.ToList();
         }
+
+        public Product GetById(long id)
+        {
+            return Db.Products.FirstOrDefault(p => p.ProductId == id);
+        }
     }
 }

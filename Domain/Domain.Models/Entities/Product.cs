@@ -4,7 +4,6 @@ namespace Domain.Models.Entities
 {
     public class Product
     {
-
         #region Properties
 
         public DateTime ExpirationDate { get; private set; }

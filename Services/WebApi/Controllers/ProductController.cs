@@ -16,9 +16,19 @@ namespace WebApi.Controllers
 
         [Route("")]
         [HttpGet]
-        public ProductsResponseMessage Get()
+        public ProductListResponseMessage Get()
         {
             return productApplicationService.Get();
         }
+
+
+        [Route("{id}")]
+        [HttpGet]
+        public ProductResponseMessage GetById(long id)
+        {
+            return productApplicationService.GetById(id);
+        }
+
+
     }
 }

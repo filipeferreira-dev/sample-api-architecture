@@ -18,12 +18,20 @@ namespace Application.Services.Implementations
             this.mapper = mapper;
         }
 
-        public ProductsResponseMessage Get()
+        public ProductListResponseMessage Get()
         {
             var productsDto = productEntityService.GetAllProducts();
             var productsMessage = mapper.Map<IEnumerable<ProductMessage>>(productsDto);
 
-            return  new ProductsResponseMessage() { Products = productsMessage };
+            return new ProductListResponseMessage { Products = productsMessage };
+        }
+
+        public ProductResponseMessage GetById(long id)
+        {
+            var productDto = productEntityService.GetById(id);
+            var productMessage = mapper.Map<ProductMessage>(productDto);
+
+            return new ProductResponseMessage { Product = productMessage };
         }
     }
 }

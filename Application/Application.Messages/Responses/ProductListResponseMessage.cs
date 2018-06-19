@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace Application.Messages.Responses
 {
-    public class ProductsResponseMessage : HttpResponseMessage
+    public class ProductListResponseMessage : HttpResponseMessage
     {
         public IEnumerable<ProductMessage> Products { get; set; }
     }
