@@ -18,7 +18,6 @@ namespace Application.Services.Implementations
             this.mapper = mapper;
         }
 
-
         public ProductsResponseMessage Get()
         {
             var productsDto = productEntityService.GetAllProducts();

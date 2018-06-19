@@ -1,7 +1,6 @@
 ﻿using Application.Services.Implementations;
 using Application.Services.Interfaces;
 using Domain.Services.Implementation.EntityServices;
-using Domain.Services.Interfaces;
 using Domain.Services.Interfaces.EntityServices;
 using Domain.Services.Interfaces.Repository;
 using Infrastructure.Data.Repositories;
@@ -13,8 +12,6 @@ namespace Infrastructure.CrossCutting.DependenceInjection
     {
         public static void RegisterServices(IServiceCollection services)
         {
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-
             services.AddScoped<IProductApplicationService, ProductApplicationService>();
 
             services.AddScoped<IProductRepository, ProductRepository>();

@@ -14,7 +14,6 @@ namespace WebApi.Controllers
             this.productApplicationService = productApplicationService;
         }
 
-
         [Route("")]
         [HttpGet]
         public ProductsResponseMessage Get()

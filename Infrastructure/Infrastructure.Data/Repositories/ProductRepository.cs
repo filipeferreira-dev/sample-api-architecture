@@ -8,12 +8,8 @@ namespace Infrastructure.Data.Repositories
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        public SampleContext Db { get; private set; }
-
-
-        public ProductRepository(SampleContext context) //: base(unitOfWork)
+        public ProductRepository(SampleContext context) : base(context)
         {
-            Db = context;
         }
 
         public override IList<Product> Get()
