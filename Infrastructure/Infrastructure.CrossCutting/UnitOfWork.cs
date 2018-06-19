@@ -3,7 +3,7 @@ using Infrastructure.Data.Context;
 
 namespace Infrastructure.CrossCutting
 {
-    public class UnitOfWork : IUnitOfWork<SampleContext>
+    public class UnitOfWork : IUnitOfWork
     {
         public SampleContext Db { get; private set; }
 
