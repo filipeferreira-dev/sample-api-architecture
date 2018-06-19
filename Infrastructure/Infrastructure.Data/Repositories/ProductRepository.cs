@@ -1,21 +1,24 @@
 ﻿using Domain.Models.Entities;
-using Domain.Interfaces.Repository;
-using Domain.Interfaces;
+using Domain.Services.Interfaces.Repository;
+using Infrastructure.Data.Context;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Infrastructure.Data.Repositories
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
+        public SampleContext Db { get; private set; }
 
-        public ProductRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
+
+        public ProductRepository(SampleContext context) //: base(unitOfWork)
         {
-
+            Db = context;
         }
 
-        public override IQueryable<Product> Get()
+        public override IList<Product> Get()
         {
-            return null;
+            return Db.Products.ToList();
         }
     }
 }

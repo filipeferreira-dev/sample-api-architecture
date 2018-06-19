@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
   </ItemGroup>
@@ -22,7 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\Domain.Interfaces\Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Application\Application.Mappers\Application.Mappers.csproj" />
+    <ProjectReference Include="..\..\Application\Application.Services\Application.Services.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Infrastructure.CrossCutting\Infrastructure.CrossCutting.csproj" />
   </ItemGroup>
 

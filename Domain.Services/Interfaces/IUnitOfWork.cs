@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Domain.Interfaces
+namespace Domain.Services.Interfaces
 {
     public interface IUnitOfWork : IDisposable 
     {

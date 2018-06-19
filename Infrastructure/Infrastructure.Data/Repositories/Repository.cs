@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using Domain.Interfaces;
-using Domain.Interfaces.Repository;
+﻿using Domain.Services.Interfaces;
+using Domain.Services.Interfaces.Repository;
+using System.Collections.Generic;
 
 namespace Infrastructure.Data.Repositories
 {
@@ -15,16 +15,16 @@ namespace Infrastructure.Data.Repositories
 
         #region Constructors
 
-        protected Repository(IUnitOfWork unitOfWork)
-        {
-            UnitOfWork = unitOfWork;
-        }
+        //protected Repository(IUnitOfWork unitOfWork)
+        //{
+        //    UnitOfWork = unitOfWork;
+        //}
 
         #endregion
 
         #region Methods
 
-        public abstract IQueryable<T> Get();
+        public abstract IList<T> Get();
 
         #endregion
     }

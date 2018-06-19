@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Domain.Models\Domain.Models.csproj" />
+    <ProjectReference Include="..\Application.Messages\Application.Messages.csproj" />
   </ItemGroup>
 
 </Project>

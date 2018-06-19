@@ -1,4 +1,6 @@
-﻿using Infrastructure.CrossCutting.DependenceInjection;
+﻿using Application.Mappers;
+using AutoMapper;
+using Infrastructure.CrossCutting.DependenceInjection;
 using Infrastructure.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,11 +24,13 @@ namespace WebApi
         {
             services.AddDbContext<SampleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             RegisterServices(services);
+            services.AddAutoMapper();
+            AutoMapperConfiguration.RegisterMappings();
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public static void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {

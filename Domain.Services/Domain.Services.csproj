@@ -5,13 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="7.0.1" />
-    <PackageReference Include="codecracker.CSharp" Version="1.1.0" />
+    <Folder Include="Implementation\TaskServices\" />
+    <Folder Include="Interfaces\TaskServices\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain.Services\Domain.Services.csproj" />
-    <ProjectReference Include="..\Application.Messages\Application.Messages.csproj" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.Models\Domain.Models.csproj" />
   </ItemGroup>
 
 </Project>

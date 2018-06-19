@@ -1,4 +1,4 @@
-﻿using Domain.Interfaces;
+﻿using Domain.Services.Interfaces;
 using Infrastructure.Data.Context;
 
 namespace Infrastructure.CrossCutting

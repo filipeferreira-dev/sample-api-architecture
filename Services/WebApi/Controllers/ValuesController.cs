@@ -1,19 +1,14 @@
-﻿using Domain.Interfaces;
-using Microsoft.AspNetCore.Mvc;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        public IUnitOfWork UnitOfWork { get; private set; }
-
-        public ValuesController(IUnitOfWork unitOfWork)
-        {
-            UnitOfWork = unitOfWork;
-        }
-
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
