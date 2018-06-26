@@ -1,5 +1,6 @@
 ﻿using Domain.Models.Dtos;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Domain.Services.Implementation.EntityServices
 {
@@ -7,6 +8,6 @@ namespace Domain.Services.Implementation.EntityServices
     {
         IList<ProductDto> GetAllProducts();
 
-        ProductDto GetById(long id);
+        Task<ProductDto> GetByIdAsync(long id);
     }
 }

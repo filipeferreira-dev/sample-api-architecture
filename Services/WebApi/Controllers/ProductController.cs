@@ -1,11 +1,12 @@
 ﻿using Application.Messages.Responses;
 using Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class ProductController : Controller
+    public class ProductController : ControllerBase
     {
         private readonly IProductApplicationService productApplicationService;
 
@@ -21,14 +22,12 @@ namespace WebApi.Controllers
             return productApplicationService.Get();
         }
 
-
         [Route("{id}")]
         [HttpGet]
-        public ProductResponseMessage GetById(long id)
+        public async Task<ProductResponseMessage> GetByIdAsync(long id)
         {
-            return productApplicationService.GetById(id);
+            return await productApplicationService.GetByIdAsync(id);
         }
-
 
     }
 }

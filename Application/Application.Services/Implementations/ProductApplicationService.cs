@@ -4,6 +4,7 @@ using Application.Services.Interfaces;
 using AutoMapper;
 using Domain.Services.Implementation.EntityServices;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Application.Services.Implementations
 {
@@ -26,9 +27,9 @@ namespace Application.Services.Implementations
             return new ProductListResponseMessage { Products = productsMessage };
         }
 
-        public ProductResponseMessage GetById(long id)
+        public async Task<ProductResponseMessage> GetByIdAsync(long id)
         {
-            var productDto = productEntityService.GetById(id);
+            var productDto = await productEntityService.GetByIdAsync(id);
             var productMessage = mapper.Map<ProductMessage>(productDto);
 
             return new ProductResponseMessage { Product = productMessage };

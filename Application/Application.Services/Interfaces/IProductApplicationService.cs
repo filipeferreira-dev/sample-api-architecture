@@ -1,4 +1,5 @@
 ﻿using Application.Messages.Responses;
+using System.Threading.Tasks;
 
 namespace Application.Services.Interfaces
 {
@@ -6,6 +7,6 @@ namespace Application.Services.Interfaces
     {
         ProductListResponseMessage Get();
 
-        ProductResponseMessage GetById(long id);
+        Task<ProductResponseMessage> GetByIdAsync(long id);
     }
 }

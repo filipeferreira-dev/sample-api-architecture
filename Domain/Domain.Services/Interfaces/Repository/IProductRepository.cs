@@ -1,10 +1,10 @@
 ﻿using Domain.Models.Entities;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Domain.Services.Interfaces.Repository
 {
     public interface IProductRepository : IRepository<Product>
     {
-        Product GetById(long id);
+        Task<Product> GetByIdAsync(long id);
     }
 }

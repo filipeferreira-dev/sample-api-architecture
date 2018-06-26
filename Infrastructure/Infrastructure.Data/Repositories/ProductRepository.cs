@@ -1,8 +1,10 @@
 ﻿using Domain.Models.Entities;
 using Domain.Services.Interfaces.Repository;
 using Infrastructure.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Data.Repositories
 {
@@ -17,9 +19,9 @@ namespace Infrastructure.Data.Repositories
             return Db.Products.ToList();
         }
 
-        public Product GetById(long id)
+        public Task<Product> GetByIdAsync(long id)
         {
-            return Db.Products.FirstOrDefault(p => p.ProductId == id);
+            return Db.Products.FirstOrDefaultAsync(p => p.ProductId == id);
         }
     }
 }

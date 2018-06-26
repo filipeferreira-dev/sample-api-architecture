@@ -3,6 +3,7 @@ using Domain.Models.Dtos;
 using Domain.Services.Implementation.EntityServices;
 using Domain.Services.Interfaces.Repository;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Domain.Services.Interfaces.EntityServices
 {
@@ -23,9 +24,9 @@ namespace Domain.Services.Interfaces.EntityServices
             return mapper.Map<IList<ProductDto>>(products);
         }
 
-        public ProductDto GetById(long id)
+        public async Task<ProductDto> GetByIdAsync(long id)
         {
-            var product = productRepository.GetById(id);
+            var product = await productRepository.GetByIdAsync(id);
             return mapper.Map<ProductDto>(product);
         }
     }
