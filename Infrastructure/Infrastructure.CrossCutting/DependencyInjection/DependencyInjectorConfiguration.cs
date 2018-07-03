@@ -6,7 +6,7 @@ using Domain.Services.Interfaces.Repository;
 using Infrastructure.Data.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Infrastructure.CrossCutting.DependenceInjection
+namespace Infrastructure.CrossCutting.DependencyInjection
 {
     public class DependencyInjectorConfiguration
     {

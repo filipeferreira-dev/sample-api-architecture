@@ -1,6 +1,6 @@
 ﻿using Application.Mappers;
 using AutoMapper;
-using Infrastructure.CrossCutting.DependenceInjection;
+using Infrastructure.CrossCutting.DependencyInjection;
 using Infrastructure.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
